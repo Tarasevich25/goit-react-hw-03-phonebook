@@ -1,0 +1,36 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 2px solid black;
+}
+.input{
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.label{
+    margin-bottom: 10px;
+}
+
+.button{
+    border: none;
+  padding: 10px 15px;
+  background-color: rgb(1, 89, 89);
+  color: #fff;
+  width: 200px;
+  font-weight: 500;
+  margin-left: 5px;
+  /* margin-right: 5px; */
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  border-radius: 100px;
+  box-shadow: 1px 2px 2px 0 rgb(0 0 0 / 0.5);
+  transition: box-shadow 250ms linear; 
+}
+
+.button:active {
+    box-shadow: 2px 5px 2px 0 rgb(0 0 0 / 0.5);
+  }
+  
