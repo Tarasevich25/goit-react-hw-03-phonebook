@@ -11,6 +11,21 @@ class App extends Component {
     contacts: [],
     filter: '',
   };
+  componentDidMount() {
+    const conatcts = localStorage.getItem('contacts');
+    const parsedConatcts = JSON.parse(conatcts);
+
+    if (parsedConatcts) {
+      this.setState({ contacts: parsedConatcts });
+    }
+  }
+
+  componentDidUpdate(prevState) {
+    const { contacts } = this.state;
+    if (prevState.contacts !== contacts) {
+      localStorage.setItem('contacts', JSON.stringify(contacts));
+    }
+  }
 
   handleSubmit = contact => {
     const id = nanoid();
@@ -50,7 +65,6 @@ class App extends Component {
       <Container>
         <h1>Phonebook</h1>
         <PhonebookForm
-          
           onSubmit={this.handleSubmit}
           handleChange={this.handleChange}
         />
