@@ -12,11 +12,11 @@ class App extends Component {
     filter: '',
   };
   componentDidMount() {
-    const conatcts = localStorage.getItem('contacts');
-    const parsedConatcts = JSON.parse(conatcts);
+    const contacts = localStorage.getItem('contacts');
+    const parsedContacts = JSON.parse(contacts);
 
-    if (parsedConatcts) {
-      this.setState({ contacts: parsedConatcts });
+    if (parsedContacts) {
+      this.setState({ contacts: parsedContacts });
     }
   }
 
