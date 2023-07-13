@@ -43,11 +43,6 @@ class App extends Component {
     }));
   };
 
-  handleChange = event => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
-  };
-
   handleFilterChange = event => {
     this.setState({ filter: event.target.value });
   };
@@ -66,7 +61,6 @@ class App extends Component {
         <h1>Phonebook</h1>
         <PhonebookForm
           onSubmit={this.handleSubmit}
-          handleChange={this.handleChange}
         />
         <h2>Contacts</h2>
         <PhonebookFilter
